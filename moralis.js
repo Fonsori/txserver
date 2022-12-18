@@ -35,7 +35,7 @@
 // }
 
 // Config
-const MORALIS_API_KEY = process.env.KEY ?? '';
+const MORALIS_API_KEY = process.env.API_KEY ?? '';
 if (!MORALIS_API_KEY?.length) throw new Error('Moralis API Key not found');
 
 const API_URL = 'https://deep-index.moralis.io/api/v2/';
