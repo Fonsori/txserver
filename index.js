@@ -14,7 +14,7 @@ if (!KEY?.length) throw new Error('Server API Key not found');
 // app.use(urlencoded({ extended: false }));
 // app.use(cookieParser());
 
-app.get('/', function (req, res, next) {
+app.get('/helth', function (req, res, next) {
     res.sendStatus(200);
 });
 
