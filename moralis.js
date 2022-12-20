@@ -48,6 +48,7 @@ async function getTxByHash(hash) {
             'Content-Type': 'application/json',
         },
     });
+    if (res.status !== 200) throw res.status;
     const result = await res.json();
     return result;
 }
