@@ -1,18 +1,11 @@
 // @ts-check
-const express = require('express');
-// const { json, urlencoded } = require('express');
-// const cookieParser = require('cookie-parser');
-const { getTxByHash } = require('./moralis');
+import express from 'express';
+import { getTxByHash } from './moralis.js';
 
 const app = express();
 
 const KEY = process.env.KEY ?? '';
 if (!KEY?.length) throw new Error('Server API Key not found');
-
-// app.use(logger('dev'));
-// app.use(json());
-// app.use(urlencoded({ extended: false }));
-// app.use(cookieParser());
 
 app.get('/helth', function (req, res, next) {
     res.sendStatus(200);
